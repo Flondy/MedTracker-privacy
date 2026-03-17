@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy – MedTracker</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Inter",sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* GLOW BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+width:800px;
+height:800px;
+background:#22c55e;
+filter:blur(200px);
+opacity:0.2;
+top:-200px;
+left:50%;
+transform:translateX(-50%);
+z-index:-1;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:900px;
+margin:80px auto;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+border-radius:24px;
+padding:50px;
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+/* HEADER */
+
+.header{
+margin-bottom:30px;
+}
+
+.header h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.header p{
+opacity:.7;
+}
+
+/* LANGUAGE SWITCH */
+
+.lang{
+position:fixed;
+top:20px;
+right:20px;
+display:flex;
+gap:10px;
+}
+
+.lang button{
+background:#22c55e;
+border:none;
+padding:8px 12px;
+border-radius:8px;
+color:white;
+cursor:pointer;
+font-weight:600;
+}
+
+/* TEXT */
+
+h2{
+margin-top:35px;
+font-size:22px;
+opacity:0;
+transform:translateY(20px);
+transition:.6s;
+}
+
+p, ul{
+margin-top:10px;
+opacity:.85;
+line-height:1.7;
+}
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:6px;
+}
+
+/* ANIMATION */
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* BACK BUTTON */
+
+.back{
+display:inline-block;
+margin-bottom:25px;
+text-decoration:none;
+color:#22c55e;
+font-weight:600;
+}
+
+.back:hover{
+opacity:.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+</div>
+
+<div class="container">
+
+<a href="https://marcel-2025.github.io/MedTracker-Pro" class="back">← Back</a>
+
+<div class="header">
+
+<h1>Privacy Policy – MedTracker</h1>
+<p>Last updated: 2026</p>
+
+</div>
+
+<h2 data-en="1. Data Collection" data-de="1. Datenerfassung">1. Data Collection</h2>
+
+<p data-en="MedTracker allows users to manually enter and store:"
+data-de="MedTracker ermöglicht es Nutzern, folgende Daten einzugeben und zu speichern:">
+MedTracker allows users to manually enter and store:
+</p>
+
+<ul>
+<li>Medication names</li>
+<li>Dosage information</li>
+<li>Intake times</li>
+<li>Daily medication logs (taken / missed)</li>
+</ul>
+
+<p data-en="This information may be considered health-related data."
+data-de="Diese Informationen können als gesundheitsbezogene Daten betrachtet werden.">
+This information may be considered health-related data.
+</p>
+
+<h2 data-en="2. Data Storage" data-de="2. Datenspeicherung">2. Data Storage</h2>
+
+<p data-en="All data is stored locally on your device only."
+data-de="Alle Daten werden ausschließlich lokal auf deinem Gerät gespeichert.">
+All data is stored locally.
+</p>
+
+<p data-en="We do NOT collect, transmit, or store data externally."
+data-de="Wir sammeln, übertragen oder speichern keine Daten extern.">
+We do not collect data externally.
+</p>
+
+<h2 data-en="3. Data Usage" data-de="3. Datennutzung">3. Data Usage</h2>
+
+<p data-en="Data is used only for tracking medication intake."
+data-de="Die Daten werden ausschließlich zur Nachverfolgung deiner Medikamenteneinnahme verwendet.">
+Used for tracking.
+</p>
+
+<h2 data-en="4. Data Sharing" data-de="4. Datenweitergabe">4. Data Sharing</h2>
+
+<p data-en="We do NOT share data with third parties."
+data-de="Wir geben keine Daten an Dritte weiter.">
+No data sharing.
+</p>
+
+<h2 data-en="5. Permissions" data-de="5. Berechtigungen">5. Permissions</h2>
+
+<p data-en="No sensitive permissions are required."
+data-de="Es werden keine sensiblen Berechtigungen benötigt.">
+No permissions needed.
+</p>
+
+<h2 data-en="6. Security" data-de="6. Sicherheit">6. Security</h2>
+
+<p data-en="You are responsible for securing your device."
+data-de="Du bist selbst für die Sicherheit deines Geräts verantwortlich.">
+Device security.
+</p>
+
+<h2 data-en="7. Changes" data-de="7. Änderungen">7. Changes</h2>
+
+<p data-en="This policy may be updated."
+data-de="Diese Richtlinie kann aktualisiert werden.">
+Updates possible.
+</p>
+
+<h2 data-en="8. Contact" data-de="8. Kontakt">8. Contact</h2>
+
+<p>flondy.dev@gmail.com</p>
+
+</div>
+
+<script>
+
+/* LANGUAGE */
+
+function setLang(lang){
+
+document.querySelectorAll("[data-en]").forEach(el=>{
+el.innerText = el.dataset[lang]
+})
+
+}
+
+/* AUTO LANGUAGE */
+
+if(navigator.language.startsWith("de")){
+setLang("de")
+}
+
+/* SCROLL ANIMATION */
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
+
+document.querySelectorAll("h2").forEach(el=>{
+observer.observe(el)
+})
+
+</script>
+
+</body>
+
+</html>
